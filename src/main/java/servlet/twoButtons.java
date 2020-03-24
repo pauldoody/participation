@@ -28,7 +28,7 @@ import javax.servlet.http.*;
 //***********************************************************************
 
 @WebServlet(
-        name = "MyServlet",
+        name = "MyOtherServlet",
         urlPatterns = {"/twoButtons"}
     )
 

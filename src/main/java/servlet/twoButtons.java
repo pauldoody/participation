@@ -27,7 +27,10 @@ import javax.servlet.http.*;
 // private void PrintTail (PrintWriter out) --> Prints the HTML bottom
 //***********************************************************************
 
-
+@WebServlet(
+        name = "twoButtons",
+        urlPatterns = {"/twoButtons"}
+    )
 
 public class twoButtons extends HttpServlet
 {

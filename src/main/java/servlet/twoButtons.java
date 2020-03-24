@@ -12,6 +12,8 @@ import java.util.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
+import javax.servlet.annotation.WebServlet;
+
 // twoButtons class
 // CONSTRUCTOR: no constructor specified (default)
 //
@@ -33,7 +35,7 @@ public class twoButtons extends HttpServlet
 {
 
 // Location of servlet.
-static String Domain  = "pauldoodyparticipation.herokuapp.com:8443";
+static String Domain  = "pauldoodyparticipation.herokuapp.com";
 static String Path    = "/twoButtons";
 static String Servlet = "twoButtons";
 

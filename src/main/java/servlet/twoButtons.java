@@ -36,7 +36,7 @@ public class twoButtons extends HttpServlet
 
 // Location of servlet.
 static String Domain  = "pauldoodyparticipation.herokuapp.com";
-static String Path    = "/twoButtons";
+static String Path    = "/"; //had twobuttons here before
 static String Servlet = "twoButtons";
 
 // Button labels

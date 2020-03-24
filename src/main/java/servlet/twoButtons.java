@@ -27,16 +27,13 @@ import javax.servlet.http.*;
 // private void PrintTail (PrintWriter out) --> Prints the HTML bottom
 //***********************************************************************
 
-@WebServlet(
-        name = "twoButtons",
-        urlPatterns = {"/twoButtons"}
-    )
+
 
 public class twoButtons extends HttpServlet
 {
 
 // Location of servlet.
-static String Domain  = "pauldoodyparticipation.herokuapp.com";
+static String Domain  = "pauldoodyparticipation.herokuapp.com:8443";
 static String Path    = "/twoButtons";
 static String Servlet = "twoButtons";
 

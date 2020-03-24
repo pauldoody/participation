@@ -29,14 +29,14 @@ import javax.servlet.annotation.WebServlet;
 // private void PrintTail (PrintWriter out) --> Prints the HTML bottom
 //***********************************************************************
 
-
+@WebServlet( name = "twoButtons", urlPatterns = {"/twoButtons"} )
 
 public class twoButtons extends HttpServlet
 {
 
 // Location of servlet.
-static String Domain  = "";
-static String Path    = "";
+static String Domain  = "pauldoodyparticipation.herokuapp.com";
+static String Path    = "/twoButtons";
 static String Servlet = "twoButtons";
 
 // Button labels
@@ -123,8 +123,7 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println("multiple submit buttons.");
    out.println("</p>");
    out.print  ("<form method=\"post\"");
-   //out.println(" action=\"https://" + Domain + Path + Servlet + "\">"); get out
-   out.println(" action=\"" + Servlet + "\">");
+   out.println(" action=\"https://" + Domain + Path + Servlet + "\">");
    out.println("");
    out.println(" <table>");
    out.println("  <tr>");

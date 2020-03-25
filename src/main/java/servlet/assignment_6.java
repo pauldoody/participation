@@ -92,7 +92,7 @@ public void PrintReturn(PrintWriter out, String seating, String comfort, String 
 String name, String email )
 {
 	out.println("<body class = \"general\">");
-	out.println("Thanks for your Input!")
+	out.println("Thanks for your Input!");
 	out.println("<table border = 1 align=\"center\">");
 	out.println("<tr><td>Seating Location: </td>");
 	out.println("<td> " + seating);

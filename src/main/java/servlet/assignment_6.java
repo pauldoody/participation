@@ -130,7 +130,7 @@ out.println("	{");
 out.println("		alert(\"Please enter your Name.\");");
 out.println("		return false;");
 out.println("	}");
-out.println("	if(document.my_form.email_field.value == "")");
+out.println("	if(document.my_form.email_field.value == \"\")");
 out.println("	{");
 out.println("		alert(\"Please enter your Email.\")");
 out.println("		return false;");
@@ -289,7 +289,7 @@ out.println("</td></tr>");
 
 
 
-out.println("<tr><td>Enter any other thoughts on the location:</td><td><textarea rows = "5" cols = "50" ></textarea></td>");
+out.println("<tr><td>Enter any other thoughts on the location:</td><td><textarea rows = \"5\" cols = \"50\" ></textarea></td>");
 out.println("</tr>");
 
 out.println("<tr><td> Name: </td><td> <input type = \"text\" name = \"name_field\" > </td> </tr>");

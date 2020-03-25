@@ -84,6 +84,7 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
    PrintHead(out);
+   PrintBody(out);
    PrintTail(out);
 } // End doGet
 

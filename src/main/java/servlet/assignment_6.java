@@ -109,6 +109,9 @@ String name, String email )
 	out.println("<tr><td>Food Rating: </td>");
 	out.println("<td> " + food);
 	out.println("</td></tr>");
+	out.println("<tr><td>Overall Rating: </td>");
+	out.println("<td> " + overall);
+	out.println("</td></tr>");
 	out.println("<tr><td>Your Name: </td>");
 	out.println("<td> " + name);
 	out.println("</td></tr>");

@@ -61,7 +61,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
 	String crowded_rating = request.getParameter("crowded_rating");
 	String volume_rating = request.getParameter("volume_rating");
 	String food_rating = request.getParameter("food_rating");
-	String overall-rating = request.getParameter("overall_rating");
+	String overall_rating = request.getParameter("overall_rating");
 	
 	String name_field = request.getParameter("name_field");
 	String email_field = request.getParameter("email_field");

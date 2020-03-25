@@ -167,7 +167,7 @@ out.println("</p>");
 out.println("</td></tr>");
 out.println("</table>");
 out.println("<b>");
-out.println("<form method=\"post\" action=\"pauldoodyparticipation.herokuapp.com/assignment_6\" name=\"my_form\" onSubmit=\"return SubmissionTest()\")>");
+out.println("<form method=\"post\" action=\"https://pauldoodyparticipation.herokuapp.com/assignment_6\" name=\"my_form\" onSubmit=\"return SubmissionTest()\")>");
 
 
 out.println("<table border = 1 align = \"center\" id = \"radio_table\">");

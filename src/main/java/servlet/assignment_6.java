@@ -123,40 +123,40 @@ out.println("</style>");
 out.println("<script>");
 
 
-out.println(" function SubmissionTest()
-{
-	if(document.my_form.name_field.value == "")
-	{
-		alert("Please enter your Name.");
-		return false;
-	}
-	if(document.my_form.email_field.value == "")
-	{
-		alert("Please enter your Email.")
-		return false;
-	}
+out.println(" function SubmissionTest()");
+out.println("{");
+out.println("	if(document.my_form.name_field.value == "")");
+out.println("	{");
+out.println("		alert("Please enter your Name.");");
+out.println("		return false;");
+out.println("	}");
+out.println("	if(document.my_form.email_field.value == "")");
+out.println("	{");
+out.println("		alert("Please enter your Email.")");
+out.println("		return false;");
+out.println("	}");
 
-	return (true);
-}
+out.println("	return (true);");
+out.println("}");
 
-var hasExpanded = 0;
+out.println("var hasExpanded = 0;");
 
-function addAnotherTextField()
-{
-	if(window.hasExpanded == 1) 
-	{
-		return;
-	}
-	 window.hasExpanded = 1;
-  var r = document.getElementById("radio_table").insertRow(document.getElementById("radio_table").rows.length);
-  var c0 = r.insertCell(0);
-  var c1 = r.insertCell(1);
-  c0.innerHTML = "<p>Another Location:</p>";
-  c1.innerHTML = "<input type=text name=newlocation>";
-  document.recalc();
+out.println("function addAnotherTextField()");
+out.println("{");
+out.println("	if(window.hasExpanded == 1) ");
+out.println("	{");
+out.println("		return;");
+out.println("	}");
+out.println("	 window.hasExpanded = 1;");
+out.println("  var r = document.getElementById("radio_table").insertRow(document.getElementById("radio_table").rows.length);");
+out.println("  var c0 = r.insertCell(0);");
+out.println("  var c1 = r.insertCell(1);");
+ out.println(" c0.innerHTML = \"<p>Another Location:</p>\";");
+out.println("  c1.innerHTML = \"<input type=text name=newlocation>\";");
+out.println("  document.recalc();");
  
-  return;
-}");
+  out.println("return;");
+out.println("}");
 out.println("</script>");
    
    out.println("</head>");

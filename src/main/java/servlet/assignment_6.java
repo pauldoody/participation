@@ -29,9 +29,9 @@ import javax.servlet.annotation.WebServlet;
 // private void PrintTail (PrintWriter out) --> Prints the HTML bottom
 //***********************************************************************
 
-@WebServlet( name = "twoButtons", urlPatterns = {"/twoButtons"} )
+@WebServlet( name = "assignment_6", urlPatterns = {"/assignment_6"} )
 
-public class twoButtons extends HttpServlet
+public class assignment_6 extends HttpServlet
 {
 
 // Location of servlet.

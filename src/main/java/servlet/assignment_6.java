@@ -125,14 +125,14 @@ out.println("<script>");
 
 out.println(" function SubmissionTest()");
 out.println("{");
-out.println("	if(document.my_form.name_field.value == "")");
+out.println("	if(document.my_form.name_field.value == \"\")");
 out.println("	{");
-out.println("		alert("Please enter your Name.");");
+out.println("		alert(\"Please enter your Name.\");");
 out.println("		return false;");
 out.println("	}");
 out.println("	if(document.my_form.email_field.value == "")");
 out.println("	{");
-out.println("		alert("Please enter your Email.")");
+out.println("		alert(\"Please enter your Email.\")");
 out.println("		return false;");
 out.println("	}");
 
@@ -148,7 +148,7 @@ out.println("	{");
 out.println("		return;");
 out.println("	}");
 out.println("	 window.hasExpanded = 1;");
-out.println("  var r = document.getElementById("radio_table").insertRow(document.getElementById("radio_table").rows.length);");
+out.println("  var r = document.getElementById(\"radio_table\").insertRow(document.getElementById(\"radio_table\").rows.length);");
 out.println("  var c0 = r.insertCell(0);");
 out.println("  var c1 = r.insertCell(1);");
  out.println(" c0.innerHTML = \"<p>Another Location:</p>\";");
@@ -169,57 +169,57 @@ out.println("</script>");
 ********************************************************* */
 private void PrintBody (PrintWriter out)
 {
-   out.println("<body class = "general">");
+   out.println("<body class = \"general\">");
    
-out.println("   <table border = 10 align = "center">");
+out.println("   <table border = 10 align = \"center\">");
 out.println("<tr><td>");
-out.println("<p class="title">");
+out.println("<p class=\"title\">");
 out.println("GMU Campus Seating Reviews");
 out.println("</p>");
 out.println("</td></tr>");
 out.println("</table>");
 
-out.println("<table border = 1 align = "center">");
+out.println("<table border = 1 align = \"center\">");
 out.println("<tr><td>");
-out.println("<p class="general">");
-out.println("   There's lots of seating on campus, but where's the best spot? What makes it so great?
-Answer the questions below to rate your favorite (and least favorite) locations. With your
-feedback, we'll be able to improve all of our seating spaces to help everyone study, eat, and
-simply relax between classes.");
+out.println("<p class=\"general\">");
+out.println("   There's lots of seating on campus, but where's the best spot? What makes it so great?");
+out.println("Answer the questions below to rate your favorite (and least favorite) locations. With your");
+out.println("feedback, we'll be able to improve all of our seating spaces to help everyone study, eat, and");
+out.println("simply relax between classes.");
 out.println("</p>");
 out.println("</td></tr>");
 out.println("</table>");
 out.println("<b>");
-out.println("<form method="post" action="pauldoodyparticipation.herokuapp.com/assignment_6" name="my_form" onSubmit="return SubmissionTest()")>");
+out.println("<form method=\"post\" action=\"pauldoodyparticipation.herokuapp.com/assignment_6\" name=\"my_form\" onSubmit=\"return SubmissionTest()\")>");
 
 
-out.println("<table border = 1 align = "center" id = "radio_table">");
+out.println("<table border = 1 align = \"center\" id = \"radio_table\">");
 
 out.println("<tr><td> Location to Rate: </td>");
 out.println("<td>");
-out.println("<input type = "radio" name = "seating-location" id="exploratory" value="exploratory" required>");
-out.println("<label for="exploratory">Exploratory Hall</label>");
+out.println("<input type = \"radio\" name = \"seating-location\" id=\"exploratory\" value=\"exploratory\" required>");
+out.println("<label for=\"exploratory\">Exploratory Hall</label>");
 out.println("</br>");
-out.println("<input type = "radio" name = "seating-location" id="fountains" value="fountains">");
-out.println("<label for="fountains">Fountains by the Mason Statue</label>");
+out.println("<input type = \"radio\" name = \"seating-location\" id=\"fountains\" value=\"fountains\">");
+out.println("<label for=\"fountains\">Fountains by the Mason Statue</label>");
 out.println("</br>");
-out.println("<input type = "radio" name = "seating-location" id="fenwick" value="fenwick">");
-out.println("<label for="fenwick">Fenwick Library</label>");
+out.println("<input type = \"radio\" name = \"seating-location\" id=\"fenwick\" value=\"fenwick\">");
+out.println("<label for=\"fenwick\">Fenwick Library</label>");
 out.println("</br>");
-out.println("<input type = "radio" name = "seating-location" id="hub" value="hub">");
-out.println("<label for="hub">The Hub</label>");
+out.println("<input type = \"radio\" name = \"seating-location\" id=\"hub\" value=\"hub\">");
+out.println("<label for=\"hub\">The Hub</label>");
 out.println("</br>");
-out.println("<input type = "radio" name = "seating-location" id="jc1" value="jc1">");
-out.println("<label for="jc1">Johnson Center Dining Area</label>");
+out.println("<input type = \"radio\" name = \"seating-location\" id=\"jc1\" value=\"jc1\">");
+out.println("<label for=\"jc1\">Johnson Center Dining Area</label>");
 out.println("</br>");
-out.println("<input type = "radio" name = "seating-location" id="jc_upper" value="jc_upper">");
-out.println("<label for="jc_upper">Johnson Center Upper Levels</label>");
+out.println("<input type = \"radio\" name = \"seating-location\" id=\"jc_upper\" value=\"jc_upper\">");
+out.println("<label for=\"jc_upper\">Johnson Center Upper Levels</label>");
 out.println("</br>");
-out.println("<input type = "radio" name = "seating-location" id="sub" value="sub">");
-out.println("<label for="sub">Student Union Building</label>");
+out.println("<input type = \"radio\" name = \"seating-location\" id=\"sub\" value=\"sub\">");
+out.println("<label for=\"sub\">Student Union Building</label>");
 out.println("</br>");
-out.println("<input type = "radio" name = "seating-location" id="other" value="other" OnClick= "addAnotherTextField()">");
-out.println("<label for="other">Another Location</label>");
+out.println("<input type = \"radio\" name = \"seating-location\" id=\"other\" value=\"other\" OnClick= \"addAnotherTextField()\">");
+out.println("<label for=\"other\">Another Location</label>");
 out.println("</br>");
 out.println("</td>");
 out.println("</tr>");
@@ -229,59 +229,59 @@ out.println("</tr>");
 out.println("</table>");
 
 out.println("<b>");
-out.println("<table border = 1 align="center">");
+out.println("<table border = 1 align=\"center\">");
 out.println("<tr><td>Rate the Comfort of Seating: </td>");
 out.println("<td> ");
 out.println("Very Uncomfortable");
-out.println("<input type = "radio" name = "comfort_rating" id="1" value="1" required>");
-out.println("<input type = "radio" name = "comfort_rating" id="2" value="2">");
-out.println("<input type = "radio" name = "comfort_rating" id="3" value="3">");
-out.println("<input type = "radio" name = "comfort_rating" id="4" value="4">");
-out.println("<input type = "radio" name = "comfort_rating" id="5" value="5">");
+out.println("<input type = \"radio\" name = \"comfort_rating\" id=\"1\" value=\"1\" required>");
+out.println("<input type = \"radio\" name = \"comfort_rating\" id=\"2\" value=\"2\">");
+out.println("<input type = \"radio\" name = \"comfort_rating\" id=\"3\" value=\"3\">");
+out.println("<input type = \"radio\" name = \"comfort_rating\" id=\"4\" value=\"4\">");
+out.println("<input type = \"radio\" name = \"comfort_rating\" id=\"5\" value=\"5\">");
 out.println("Very Comfortable");
 out.println("</td></tr>");
 
 out.println("<tr><td>Rate how Crowded: </td>");
-out.println("<td> v
+out.println("<td> ");
 out.println("Empty");
-out.println("<input type = "radio" name = "crowded_rating" id="1" value="1" required>");
-out.println("<input type = "radio" name = "crowded_rating" id="2" value="2">");
-out.println("<input type = "radio" name = "crowded_rating" id="3" value="3">");
-out.println("<input type = "radio" name = "crowded_rating" id="4" value="4">");
-out.println("<input type = "radio" name = "crowded_rating" id="5" value="5">");
+out.println("<input type = \"radio\" name = \"crowded_rating\" id=\"1\" value=\"1\" required>");
+out.println("<input type = \"radio\" name = \"crowded_rating\" id=\"2\" value=\"2\">");
+out.println("<input type = \"radio\" name = \"crowded_rating\" id=\"3\" value=\"3\">");
+out.println("<input type = \"radio\" name = \"crowded_rating\" id=\"4\" value=\"4\">");
+out.println("<input type = \"radio\" name = \"crowded_rating\" id=\"5\" value=\"5\">");
 out.println("Very Crowded");
 out.println("</td></tr>");
 
 out.println("<tr><td>Rate the Volume: </td>");
 out.println("<td> ");
 out.println("Silent");
-out.println("<input type = "radio" name = "volume_rating" id="1" value="1" required>");
-out.println("<input type = "radio" name = "volume_rating" id="2" value="2">");
-out.println("<input type = "radio" name = "volume_rating" id="3" value="3">");
-out.println("<input type = "radio" name = "volume_rating" id="4" value="4">");
-out.println("<input type = "radio" name = "volume_rating" id="5" value="5">");
+out.println("<input type = \"radio\" name = \"volume_rating\" id=\"1\" value=\"1\" required>");
+out.println("<input type = \"radio\" name = \"volume_rating\" id=\"2\" value=\"2\">");
+out.println("<input type = \"radio\" name = \"volume_rating\" id=\"3\" value=\"3\">");
+out.println("<input type = \"radio\" name = \"volume_rating\" id=\"4\" value=\"4\">");
+out.println("<input type = \"radio\" name = \"volume_rating\" id=\"5\" value=\"5\">");
 out.println("Ear Shattering");
 out.println("</td></tr>");
 
 out.println("<tr><td>How many food options are nearby?: </td>");
 out.println("<td> ");
 out.println("No Food");
-out.println("<input type = "radio" name = "food_rating" id="1" value="1" required>");
-out.println("<input type = "radio" name = "food_rating" id="2" value="2">");
-out.println("<input type = "radio" name = "food_rating" id="3" value="3">");
-out.println("<input type = "radio" name = "food_rating" id="4" value="4">");
-out.println("<input type = "radio" name = "food_rating" id="5" value="5">");
+out.println("<input type = \"radio\" name = \"food_rating\" id=\"1\" value=\"1\" required>");
+out.println("<input type = \"radio\" name = \"food_rating\" id=\"2\" value=\"2\">");
+out.println("<input type = \"radio\" name = \"food_rating\" id=\"3\" value=\"3\">");
+out.println("<input type = \"radio\" name = \"food_rating\" id=\"4\" value=\"4\">");
+out.println("<input type = \"radio\" name = \"food_rating\" id=\"5\" value=\"5\">");
 out.println("Food Everywhere");
 out.println("</td></tr>");
 
 out.println("<tr><td>Your Overall Rating of the Location: </td>");
 out.println("<td> ");
 out.println("Poor");
-out.println("<input type = "radio" name = "overall_rating" id="1" value="1" required>");
-out.println("<input type = "radio" name = "overall_rating" id="2" value="2">");
-out.println("<input type = "radio" name = "overall_rating" id="3" value="3">");
-out.println("<input type = "radio" name = "overall_rating" id="4" value="4">");
-out.println("<input type = "radio" name = "overall_rating" id="5" value="5">");
+out.println("<input type = \"radio\" name = \"overall_rating\" id=\"1\" value=\"1\" required>");
+out.println("<input type = \"radio\" name = \"overall_rating\" id=\"2\" value=\"2\">");
+out.println("<input type = \"radio\" name = \"overall_rating\" id=\"3\" value=\"3\">");
+out.println("<input type = \"radio\" name = \"overall_rating\" id=\"4\" value=\"4\">");
+out.println("<input type = \"radio\" name = \"overall_rating\" id=\"5\" value=\"5\">");
 out.println("Excellent");
 out.println("</td></tr>");
 
@@ -292,11 +292,11 @@ out.println("</td></tr>");
 out.println("<tr><td>Enter any other thoughts on the location:</td><td><textarea rows = "5" cols = "50" ></textarea></td>");
 out.println("</tr>");
 
-out.println("<tr><td> Name: </td><td> <input type = "text" name = "name_field" > </td> </tr>");
-out.println("<tr><td> GMU Email: </td><td> <input type = "text" name = "email_field" > </td> </tr>");
+out.println("<tr><td> Name: </td><td> <input type = \"text\" name = \"name_field\" > </td> </tr>");
+out.println("<tr><td> GMU Email: </td><td> <input type = \"text\" name = \"email_field\" > </td> </tr>");
 
 out.println("<tr> <td>");
-out.println("<input type="submit" name="submission" value="Submit"  >");
+out.println("<input type=\"submit\" name=\"submission\" value=\"Submit\"  >");
 out.println("</td></tr>");
 
 out.println("</table>");

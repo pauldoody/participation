@@ -56,11 +56,21 @@ static String Style ="https://www.cs.gmu.edu/~offutt/classes/432/432-style.css";
 public void doPost (HttpServletRequest request, HttpServletResponse response)
    throws ServletException, IOException
 {
+	String seating_location = request.getParameter("seating-location");
+	String comfort_rating = request.getParameter("comfort_rating");
+	String crowded_rating = request.getParameter("crowded_rating");
+	String volume_rating = request.getParameter("volume_rating");
+	String food_rating = request.getParameter("food_rating");
+	String overall-rating = request.getParameter("overall_rating");
+	
+	String name_field = request.getParameter("name_field");
+	String email_field = request.getParameter("email_field");
 	
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
    PrintHead(out);
-   PrintBody(out);
+   PrintReturn(out,seating_location, comfort_rating, crowded_rating, volume_rating, food_rating, overall_rating,
+   name_field, email_field);
    PrintTail(out);
 }  // End doPost
 
@@ -74,9 +84,38 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
    PrintHead(out);
-   PrintBody(out);
    PrintTail(out);
 } // End doGet
+
+public void PrintReturn(PrintWriter out, String seating, String comfort, String crowded, String volume, String food, String overall,
+String name, String email )
+{
+	out.println("<body class = \"general\">");
+	out.println("<table border = 1 align=\"center\">");
+	out.println("<tr><td>Seating Location: </td>");
+	out.println("<td> " + seating);
+	out.println("</td></tr>");
+	out.println("<tr><td>Seating Location: </td>");
+	out.println("<td> " + comfort);
+	out.println("</td></tr>");
+	out.println("<tr><td>Seating Location: </td>");
+	out.println("<td> " + crowded);
+	out.println("</td></tr>");
+	out.println("<tr><td>Seating Location: </td>");
+	out.println("<td> " + volume);
+	out.println("</td></tr>");
+	out.println("<tr><td>Seating Location: </td>");
+	out.println("<td> " + food);
+	out.println("</td></tr>");
+	out.println("<tr><td>Seating Location: </td>");
+	out.println("<td> " + name);
+	out.println("</td></tr>");
+	out.println("<tr><td>Seating Location: </td>");
+	out.println("<td> " + email);
+	out.println("</td></tr>");
+	out.println("</body>");
+
+}
 
 /** *****************************************************
  *  Prints the <head> of the HTML page, no <body>.

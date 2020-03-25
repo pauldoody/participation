@@ -92,26 +92,27 @@ public void PrintReturn(PrintWriter out, String seating, String comfort, String 
 String name, String email )
 {
 	out.println("<body class = \"general\">");
+	out.println("Thanks for your Input!")
 	out.println("<table border = 1 align=\"center\">");
 	out.println("<tr><td>Seating Location: </td>");
 	out.println("<td> " + seating);
 	out.println("</td></tr>");
-	out.println("<tr><td>Seating Location: </td>");
+	out.println("<tr><td>Comfort Rating: </td>");
 	out.println("<td> " + comfort);
 	out.println("</td></tr>");
-	out.println("<tr><td>Seating Location: </td>");
+	out.println("<tr><td>Crowd Rating: </td>");
 	out.println("<td> " + crowded);
 	out.println("</td></tr>");
-	out.println("<tr><td>Seating Location: </td>");
+	out.println("<tr><td>Volume Rating: </td>");
 	out.println("<td> " + volume);
 	out.println("</td></tr>");
-	out.println("<tr><td>Seating Location: </td>");
+	out.println("<tr><td>Food Rating: </td>");
 	out.println("<td> " + food);
 	out.println("</td></tr>");
-	out.println("<tr><td>Seating Location: </td>");
+	out.println("<tr><td>Your Name: </td>");
 	out.println("<td> " + name);
 	out.println("</td></tr>");
-	out.println("<tr><td>Seating Location: </td>");
+	out.println("<tr><td>Your Email: </td>");
 	out.println("<td> " + email);
 	out.println("</td></tr>");
 	out.println("</body>");

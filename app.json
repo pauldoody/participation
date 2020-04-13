@@ -10,6 +10,6 @@
     "swe"
   ],
   "dependencies": {
-    "org.json.simple.JSONObject": "latest"
+    "org.json.simple": "latest"
   }
 }

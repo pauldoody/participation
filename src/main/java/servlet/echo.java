@@ -21,7 +21,7 @@ import java.util.Map;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import org.json.simple.JSONObject;
+//import org.json.simple.JSONObject;
 
 //import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -64,7 +64,8 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    throws ServletException, IOException
 {
 	
-   response.setContentType("application/json;charset=UTF-8");
+   //response.setContentType("application/json;charset=UTF-8");
+   response.setContentType("text/html");
    PrintWriter out = response.getWriter();
    
    Map<String , String> output = new HashMap<String , String>();
@@ -76,7 +77,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    //ObjectMapper mapped = new ObjectMapper();
    //String finalOutput = mapped.writeValueAsString(output);
    //JSONObject jsonObject =  HTTP.toJSONObject(output.toString());
-	out.println(output.toString());
+	out.println("Echo Post");
    
 }  // End doPost
 

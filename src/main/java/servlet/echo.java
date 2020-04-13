@@ -19,7 +19,7 @@ import java.util.Map;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+//import com.fasterxml.jackson.databind.ObjectMapper;
 
 // twoButtons class
 // CONSTRUCTOR: no constructor specified (default)
@@ -69,8 +69,9 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    output.put("2","two");
    output.put("3","three");
    
-   ObjectMapper mapped = new ObjectMapper();
-   String finalOutput = mapped.writeValueAsString(output);
+   //ObjectMapper mapped = new ObjectMapper();
+   //String finalOutput = mapped.writeValueAsString(output);
+   JSONObject jsonObject =  HTTP.toJSONObject(output.toString());
 	out.print(finalOutput);
    
 }  // End doPost

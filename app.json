@@ -8,5 +8,8 @@
     "tomcat",
     "gmu",
     "swe"
-  ]
+  ],
+  "dependencies": {
+    "org.json.simple.JSONObject": "latest"
+  }
 }

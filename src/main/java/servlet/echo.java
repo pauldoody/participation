@@ -21,7 +21,7 @@ import java.util.Map;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-//import org.json.simple.JSONObject;
+import org.json.simple.JSONObject;
 
 //import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -65,7 +65,9 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
 {
 	
    //response.setContentType("application/json;charset=UTF-8");
-   response.setContentType("text/html");
+   //response.setContentType("text/html");
+   response.setContentType("application/json");
+   response.setCharacterEncoding("UTF-8");
    PrintWriter out = response.getWriter();
    
    Map<String , String> output = new HashMap<String , String>();

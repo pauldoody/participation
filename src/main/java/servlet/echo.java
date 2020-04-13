@@ -4,6 +4,8 @@
         @author Jeff Offutt
 ********************************************************************* */
 
+package com.howtodoinjava.demo.jsonsimple;
+
 // Import Java Libraries
 import java.io.*;
 import java.util.*;

@@ -64,7 +64,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
    
-   Map<String , String> output = new HashMap<>();
+   Map<String , String> output = new HashMap<String , String>();
    output.put("0","zero");
    output.put("1","one");
    output.put("2","two");

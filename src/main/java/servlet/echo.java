@@ -21,7 +21,7 @@ import java.util.Map;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-//import org.json.simple.JSONObject;
+import org.json.simple.JSONObject;
 
 //import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -76,7 +76,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    //ObjectMapper mapped = new ObjectMapper();
    //String finalOutput = mapped.writeValueAsString(output);
    //JSONObject jsonObject =  HTTP.toJSONObject(output.toString());
-	out.print(output.toString());
+	out.println(output.toString());
    
 }  // End doPost
 

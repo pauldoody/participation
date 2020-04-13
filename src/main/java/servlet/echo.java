@@ -3,7 +3,7 @@
 
         @author Jeff Offutt
 ********************************************************************* */
-package springservlet.deployer.servlets.Echo;
+
 // Import Java Libraries
 import java.io.*;
 import java.util.*;
@@ -19,7 +19,6 @@ import java.util.Map;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static springservlet.deployer.util.CORS.setCORS;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 // twoButtons class

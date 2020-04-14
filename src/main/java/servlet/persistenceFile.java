@@ -46,6 +46,7 @@ public class persistenceFile extends HttpServlet{
   {
      String name = request.getParameter(Data.NAME.name());
      String age = request.getParameter(Data.AGE.name());
+	 String major = request.getParameter(Data.MAJOR.name());
 
      String error = "";
      if(name == null){
@@ -73,6 +74,11 @@ public class persistenceFile extends HttpServlet{
             age = "";
           }
      }
+	 
+	 if(major == null){
+       error= "<li>Major is required</li>";
+       major = "";
+     }
 
      response.setContentType("text/html");
      PrintWriter out = response.getWriter();
@@ -87,7 +93,7 @@ public class persistenceFile extends HttpServlet{
        PrintTail(out);
      }else{
        PrintHead(out);
-       PrintBody(out, name, age, error);
+       PrintBody(out, name, age, major, error);
        PrintTail(out);
      }
   }
@@ -127,7 +133,7 @@ public class persistenceFile extends HttpServlet{
   /** *****************************************************
    *  Prints the <BODY> of the HTML page
   ********************************************************* */
-  private void PrintBody (PrintWriter out, String name, String age, String error){
+  private void PrintBody (PrintWriter out, String name, String age, String major, String error){
      out.println("<body onLoad=\"setFocus()\">");
      out.println("<p>");
      out.println("A simple example that demonstrates how to persist data to a file");
@@ -155,6 +161,13 @@ public class persistenceFile extends HttpServlet{
       +"\" oninput=\"this.value=this.value.replace(/[^0-9]/g,'');\" value=\""
       +age+"\" size=3 required></td>");
      out.println("  </tr>");
+	 
+	 out.println("  <tr>");
+     out.println("   <td>Major:</td>");
+     out.println("   <td><input type=\"text\" name=\""+Data.MAJOR.name()
+      +"\" value=\""+major+"\" size=30 required></td>");
+     out.println("  </tr>");
+	 
      out.println(" </table>");
      out.println(" <br>");
      out.println(" <br>");
@@ -181,6 +194,7 @@ public class persistenceFile extends HttpServlet{
         out.println("  <tr>");
         out.println("   <th>Name</th>");
         out.println("   <th>Age</th>");
+		out.println("   <th>Major</th>");
         out.println("  </tr>");
         File file = new File(resourcePath);
         if(!file.exists()){

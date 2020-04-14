@@ -27,7 +27,7 @@ public class persistenceFile extends HttpServlet{
 
   static String Domain  = "";
   static String Path    = "";
-  static String Servlet = "participation";
+  static String Servlet = "persistance";
 
   // Button labels
   static String OperationAdd = "Add";

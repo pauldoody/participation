@@ -8,8 +8,5 @@
     "tomcat",
     "gmu",
     "swe"
-  ],
-  "dependencies": {
-    "org.json.simple": "latest"
-  }
+  ]
 }

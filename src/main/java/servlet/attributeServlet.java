@@ -22,6 +22,39 @@ public class attributeServlet extends HttpServlet
 public void doGet (HttpServletRequest request, HttpServletResponse response)
        throws ServletException, IOException
 {
+	
+	
+	if (action != null && action.equals("invalidate"))
+   {  // Called from the invalidate button, kill the session.
+      // Get session object
+      HttpSession session = request.getSession();
+      session.invalidate();
+
+      response.setContentType("text/html");
+      PrintWriter out = response.getWriter();
+
+      out.println("<html>");
+      out.println("<head>");
+      out.println(" <title>Invalidated</title>");
+      out.println("</head>");
+      out.println("");
+      out.println("<body>");
+
+      out.println("<p>Your session has been invalidated.</P>");
+
+      // Create a link so the user can create a new session.
+      // The link will have a parameter builtin
+      String lifeCycleURL = "/attribute";
+      out.println("<a href=\"" + lifeCycleURL + "?action=newSession\">");
+      out.println("Create new session</A>");
+
+      out.println("</body>");
+      out.println("</html>");
+      out.close();
+	  return;
+   } //end if
+	
+	
    // Get session object
    HttpSession session = request.getSession();
 
@@ -73,6 +106,10 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    out.println("</form>");
    out.println("<hr>");
 
+   String lifeCycleURL = "/attribute";
+      out.print  ("<br><br><a href=\"" + lifeCycleURL + "?action=invalidate\">");
+      out.println("Invalidate the session</a>");
+   
    out.println("Attributes in this session:");
    Enumeration e = session.getAttributeNames();
    while (e.hasMoreElements())

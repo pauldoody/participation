@@ -23,7 +23,7 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
        throws ServletException, IOException
 {
 	
-	
+	String action = request.getParameter("action");
 	if (action != null && action.equals("invalidate"))
    {  // Called from the invalidate button, kill the session.
       // Get session object

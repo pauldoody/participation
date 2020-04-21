@@ -107,8 +107,8 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    out.println("<hr>");
 
    String lifeCycleURL = "/attribute";
-      out.print  ("<br><br><a href=\"" + lifeCycleURL + "?action=invalidate\">");
-      out.println("Invalidate the session</a>");
+      out.print  ("<br><a href=\"" + lifeCycleURL + "?action=invalidate\">");
+      out.println("Invalidate the session</a><br>");
    
    out.println("Attributes in this session:");
    Enumeration e = session.getAttributeNames();

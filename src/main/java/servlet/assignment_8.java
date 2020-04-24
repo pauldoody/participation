@@ -350,7 +350,7 @@ out.println("</form>");
 		try{
 		File file = new File(FILE_PATH);
         if(!file.exists()){
-          out.println("   <tr>No entries persisted yet.</tr>");
+          out.println("   <tr><th>No entries persisted yet.</th></tr>");
         }
 		else
 		{

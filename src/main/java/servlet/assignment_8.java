@@ -74,7 +74,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    
    
    PrintWriter entriesPrintWriter = new PrintWriter(new FileWriter(RESOURCE_FILE, true), true);
-   entriesPrintWriter.println(name_field+VS+email_field+VS+seating-location+VS+comfort_rating+VS+crowded_rating+VS+
+   entriesPrintWriter.println(name_field+VS+email_field+VS+seating_location+VS+comfort_rating+VS+crowded_rating+VS+
    volume_rating+VS+food_rating+VS+overall_rating);
    entriesPrintWriter.close();
    
@@ -354,7 +354,7 @@ out.println("</form>");
 			BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 			String line;
         while ((line = bufferedReader.readLine()) != null) {
-          String []  entry= line.split(VALUE_SEPARATOR);
+          String []  entry= line.split(VS);
           out.println("  <tr>");
           for(String value: entry){
               out.println("   <td>"+value+"</td>");

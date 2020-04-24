@@ -345,6 +345,7 @@ out.println("</form>");
 		out.println("   <th>Overall Rating</th>");
         out.println("  </tr>");
 
+		try{
 		File file = new File(FILE_PATH);
         if(!file.exists()){
           out.println("   <p>No entries persisted yet.</p>");
@@ -363,6 +364,11 @@ out.println("</form>");
         }
         bufferedReader.close();
 		}
+		} catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
    
    out.println("</body>");
 } // End PrintBody

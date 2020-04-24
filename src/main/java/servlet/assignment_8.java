@@ -334,7 +334,7 @@ out.println("</td></tr>");
 out.println("</table>");
 out.println("</form>");
 
-		out.println("<table>"):
+		out.println("<table>");
 		out.println("  <tr>");
         out.println("   <th>Name</th>");
         out.println("   <th>Email</th>");

@@ -80,8 +80,9 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    
    
    PrintHead(out);
-   PrintReturn(out,seating_location, comfort_rating, crowded_rating, volume_rating, food_rating, overall_rating,
-   name_field, email_field);
+   //PrintReturn(out,seating_location, comfort_rating, crowded_rating, volume_rating, food_rating, overall_rating,
+   //name_field, email_field);
+   PrintBody(out , RESOURCE_FILE);
    PrintTail(out);
 }  // End doPost
 
@@ -334,7 +335,7 @@ out.println("</td></tr>");
 out.println("</table>");
 out.println("</form>");
 
-		out.println("<table>");
+		out.println("<table  border = 1 align=\"center\">>");
 		out.println("  <tr>");
         out.println("   <th>Name</th>");
         out.println("   <th>Email</th>");
@@ -349,7 +350,7 @@ out.println("</form>");
 		try{
 		File file = new File(FILE_PATH);
         if(!file.exists()){
-          out.println("   <p>No entries persisted yet.</p>");
+          out.println("   <tr>No entries persisted yet.</tr>");
         }
 		else
 		{

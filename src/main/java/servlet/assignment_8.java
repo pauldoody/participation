@@ -33,6 +33,9 @@ import javax.servlet.annotation.WebServlet;
 
 public class assignment_8 extends HttpServlet
 {
+	
+	static String RESOURCE_FILE = "entries.txt";
+	static final String VS = ";"; //value separator
 
 // Location of servlet.
 static String Domain  = "pauldoodyparticipation.herokuapp.com";
@@ -68,6 +71,14 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
 	
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
+   
+   
+   PrintWriter entriesPrintWriter = new PrintWriter(new FileWriter(RESOURCE_FILE, true), true);
+   entriesPrintWriter.println(name_field+VS+email_field+VS+seating-location+VS+comfort_rating+VS+crowded_rating+VS+
+   volume_rating+VS+food_rating+VS+overall_rating);
+   entriesPrintWriter.close();
+   
+   
    PrintHead(out);
    PrintReturn(out,seating_location, comfort_rating, crowded_rating, volume_rating, food_rating, overall_rating,
    name_field, email_field);
@@ -84,7 +95,7 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
    PrintHead(out);
-   PrintBody(out);
+   PrintBody(out , RESOURCE_FILE);
    PrintTail(out);
 } // End doGet
 
@@ -188,7 +199,7 @@ out.println("</script>");
  *  Prints the <BODY> of the HTML page with the form data
  *  values from the parameters.
 ********************************************************* */
-private void PrintBody (PrintWriter out)
+private void PrintBody (PrintWriter out , String FILE_PATH)
 {
    out.println("<body class = \"general\">");
    
@@ -322,6 +333,36 @@ out.println("</td></tr>");
 
 out.println("</table>");
 out.println("</form>");
+
+		out.println("  <tr>");
+        out.println("   <th>Name</th>");
+        out.println("   <th>Email</th>");
+		out.println("   <th>Seating Location</th>");
+		out.println("   <th>Comfort Rating</th>");
+		out.println("   <th>Crowded Rating</th>");
+		out.println("   <th>Volume Rating</th>");
+		out.println("   <th>Food Rating</th>");
+		out.println("   <th>Overall Rating</th>");
+        out.println("  </tr>");
+
+		File file = new File(FILE_PATH);
+        if(!file.exists()){
+          out.println("   <p>No entries persisted yet.</p>");
+        }
+		else
+		{
+			BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+			String line;
+        while ((line = bufferedReader.readLine()) != null) {
+          String []  entry= line.split(VALUE_SEPARATOR);
+          out.println("  <tr>");
+          for(String value: entry){
+              out.println("   <td>"+value+"</td>");
+          }
+          out.println("  </tr>");
+        }
+        bufferedReader.close();
+		}
    
    out.println("</body>");
 } // End PrintBody

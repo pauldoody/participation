@@ -188,7 +188,7 @@ public class final_class extends HttpServlet{
      out.println("</html>");
   }
   
-  printTruthTable(PrintWriter out ,int N, int index, int[] truthVals) {
+  private void printTruthTable(PrintWriter out ,int N, int index, int[] truthVals) {
    if (index == N) {
       for (i=0; i<N; i++)
          out.print(truthVals[i] + " ");

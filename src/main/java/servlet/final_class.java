@@ -98,7 +98,7 @@ public class final_class extends HttpServlet{
 	 out.println("<script>");
 	 out.println("function SubmissionTest()");
 	out.println("{");
-	out.println("if(document.the_form.Data.BOOL.name().value == \"\")");
+	out.println("if(document.the_form.BOOL.value == \"\")");
 	out.println("{");
 	out.println("	alert(\"Field cannot be empty.\");");
 	out.println("	return false;");

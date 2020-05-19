@@ -142,7 +142,7 @@ public class final_class extends HttpServlet{
     out.println("");
     out.println(" <table>");
 
-    try {
+    //try {
         out.println("  <tr>");
         out.println("   <th>Boolean Predicates</th>");
         out.println("  </tr>");
@@ -170,11 +170,11 @@ public class final_class extends HttpServlet{
 		printTruthTable(out, count , 0 , new int[count]);
 		
 		
-      } catch (FileNotFoundException ex) {
+      /*} catch (FileNotFoundException ex) {
             ex.printStackTrace();
         } catch (IOException ex) {
             ex.printStackTrace();
-        }
+        }*/
      out.println(" </table>");
      out.println("");
      out.println("</body>");

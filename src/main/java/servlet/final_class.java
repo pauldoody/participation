@@ -166,7 +166,7 @@ public class final_class extends HttpServlet{
         }
         bufferedReader.close();*/
 		
-		String ands = bool.split("AND");
+		String[] ands = bool.split("AND");
 		int count = ands.length;
 		out.println(" Count: " + count);
 		printTruthTable(out, count , 0 , new int[count]);

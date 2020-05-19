@@ -94,6 +94,17 @@ public class final_class extends HttpServlet{
      // Put the focus in the name field
      out.println("</head>");
      out.println("");
+	 
+	 out.println("<script>");
+	 out.println("function SubmissionTest()");
+	out.println("{");
+	out.println("if(document.the_form.Data.BOOL.name().value == "")");
+	out.println("{");
+	out.println("	alert(\"Field cannot be empty.\");");
+	out.println("	return false;");
+	out.println("}");
+	out.println("}");
+	out.println("</script>");
   }
 
   /** *****************************************************
@@ -112,7 +123,7 @@ public class final_class extends HttpServlet{
        out.println("</ol>");
      }*/
 
-     out.print  ("<form name=\"persist2file\" method=\"post\"");
+     out.print  ("<form name=\"the_form\" method=\"post\"");
      out.println(" action=\""+Domain+Path+Servlet+"\">");
      out.println("");
      out.println(" <table>");
@@ -127,7 +138,7 @@ public class final_class extends HttpServlet{
      out.println(" <br>");
      out.println(" <br>");
      out.println(" <input type=\"submit\" value=\"" + "Go"
-      + "\" name=\"Operation\">");
+      + "\" name=\"Operation\"  onSubmit=\"return SubmissionTest()>");
      out.println(" <input type=\"reset\" value=\"Reset\" name=\"reset\">");
      out.println("</form>");
      out.println("");

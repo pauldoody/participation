@@ -143,9 +143,9 @@ public class final_class extends HttpServlet{
     //out.println(" <table>");
 
     //try {
-        out.println("  <tr>");
-        out.println("   <th>Boolean Predicates</th>");
-        out.println("  </tr>");
+        //out.println("  <tr>");
+        out.println("   <p>Boolean Predicates</p>");
+        //out.println("  </tr>");
         /*File file = new File(resourcePath);
         if(!file.exists()){
           out.println("  <tr>");
@@ -169,7 +169,7 @@ public class final_class extends HttpServlet{
 		String[] ands = bool.split("AND|OR");
 		int count = ands.length;
 		//out.println(" Count: " + count);
-		out.println("<table>");
+		out.println("<br><br>");
 		printTruthTable(out, count , 0 , new int[count]);
 		
 		
@@ -178,7 +178,7 @@ public class final_class extends HttpServlet{
         } catch (IOException ex) {
             ex.printStackTrace();
         }*/
-     out.println(" </table>");
+     //out.println(" </table>");
      out.println("");
      out.println("</body>");
   }
@@ -194,13 +194,13 @@ public class final_class extends HttpServlet{
   private void printTruthTable(PrintWriter out ,int N, int index, int[] truthVals) {
 	  
    if (index == N) {
-	   String listing = "";
+	   String listing = "<p>";
       for (int i=0; i<N; i++)
 	  {
 		  
          listing += truthVals[i] + " ";
 	  }
-		out.println(listing);
+		out.println(listing + "</p><br>");
    } else {
       for (int i=0; i<2; i++) {
          truthVals[index] = i;

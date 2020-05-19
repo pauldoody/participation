@@ -198,7 +198,7 @@ public class final_class extends HttpServlet{
 		  out.print("<tr>");
          out.print(truthVals[i] + " ");
 	  }
-		out.print("<\tr>");
+		out.print("</tr>");
    } else {
       for (int i=0; i<2; i++) {
          truthVals[index] = i;

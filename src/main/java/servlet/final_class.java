@@ -166,7 +166,7 @@ public class final_class extends HttpServlet{
         }
         bufferedReader.close();*/
 		
-		String[] ands = bool.split("AND");
+		String[] ands = bool.split("AND|OR");
 		int count = ands.length;
 		out.println(" Count: " + count);
 		printTruthTable(out, count , 0 , new int[count]);
@@ -191,10 +191,14 @@ public class final_class extends HttpServlet{
   }
   
   private void printTruthTable(PrintWriter out ,int N, int index, int[] truthVals) {
+	  
    if (index == N) {
       for (int i=0; i<N; i++)
+	  {
+		  out.print("<tr>");
          out.print(truthVals[i] + " ");
-		out.print("\n");
+	  }
+		out.print("<\tr>");
    } else {
       for (int i=0; i<2; i++) {
          truthVals[index] = i;

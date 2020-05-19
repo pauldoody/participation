@@ -167,6 +167,7 @@ public class final_class extends HttpServlet{
         bufferedReader.close();*/
 		
 		int count = bool.split("OR|//AND").length;
+		out.println(" Count: " + count);
 		printTruthTable(out, count , 0 , new int[count]);
 		
 		

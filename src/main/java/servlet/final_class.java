@@ -39,8 +39,13 @@ public class final_class extends HttpServlet{
 
      String error = "";
      if(bool == null){
-       error= "<li>Bool is required</li>";
+       error= "<li>Input is required</li>";
      }
+	 
+	 if(!bool.contains("AND") && !bool.contains("OR"))
+	 {
+		 error = "<li>Must be a Predicate</li>";
+	 }
 
 
      response.setContentType("text/html");
@@ -52,7 +57,7 @@ public class final_class extends HttpServlet{
        entriesPrintWriter.close();
 
        PrintHead(out);
-       PrintResponseBody(out, RESOURCE_FILE);
+       PrintResponseBody(out, RESOURCE_FILE ,  bool);
        PrintTail(out);
      }else{
        PrintHead(out);
@@ -94,7 +99,7 @@ public class final_class extends HttpServlet{
   private void PrintBody (PrintWriter out, String bool){
      out.println("<body onLoad=\"setFocus()\">");
      out.println("<p>");
-     out.println("A simple example that demonstrates how to persist data to a file");
+     out.println("Enter a Boolean Predicate for its Truth Table");
      out.println("</p>");
 
      /*if(error != null && error.length() > 0){
@@ -118,7 +123,7 @@ public class final_class extends HttpServlet{
      out.println(" </table>");
      out.println(" <br>");
      out.println(" <br>");
-     out.println(" <input type=\"submit\" value=\"" + OperationAdd
+     out.println(" <input type=\"submit\" value=\"" + "Go"
       + "\" name=\"Operation\">");
      out.println(" <input type=\"reset\" value=\"Reset\" name=\"reset\">");
      out.println("</form>");
@@ -129,19 +134,19 @@ public class final_class extends HttpServlet{
   /** *****************************************************
    *  Prints the <BODY> of the HTML page
   ********************************************************* */
-  private void PrintResponseBody (PrintWriter out, String resourcePath){
+  private void PrintResponseBody (PrintWriter out, String resourcePath , String bool){
     out.println("<body onLoad=\"setFocus()\">");
     out.println("<p>");
-    out.println("A simple example that demonstrates how to persist data to a file");
+    out.println("Truth Table:");
     out.println("</p>");
     out.println("");
     out.println(" <table>");
 
     try {
         out.println("  <tr>");
-        out.println("   <th>Bool</th>");
+        out.println("   <th>Boolean Predicates</th>");
         out.println("  </tr>");
-        File file = new File(resourcePath);
+        /*File file = new File(resourcePath);
         if(!file.exists()){
           out.println("  <tr>");
           out.println("   <td>No entries persisted yet.</td>");
@@ -159,7 +164,12 @@ public class final_class extends HttpServlet{
           }
           out.println("  </tr>");
         }
-        bufferedReader.close();
+        bufferedReader.close();*/
+		
+		int count = bool.split("OR|//AND").length;
+		printTruthTable(out, count , 0 , new int[count]);
+		
+		
       } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         } catch (IOException ex) {
@@ -177,4 +187,18 @@ public class final_class extends HttpServlet{
      out.println("");
      out.println("</html>");
   }
+  
+  printTruthTable(PrintWriter out ,int N, int index, int[] truthVals) {
+   if (index == N) {
+      for (i=0; i<N; i++)
+         out.print(truthVals[i] + " ");
+		out.print("\n");
+   } else {
+      for (i=0; i<2; i++) {
+         truthVals[index] = i;
+         printTruthTable(N, index + 1, truthVals);
+      }
+   }
+}
+
 }

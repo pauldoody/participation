@@ -169,7 +169,7 @@ public class final_class extends HttpServlet{
 		String[] ands = bool.split("AND|OR");
 		int count = ands.length;
 		//out.println(" Count: " + count);
-		out.println("<table>")
+		out.println("<table>");
 		printTruthTable(out, count , 0 , new int[count]);
 		
 		

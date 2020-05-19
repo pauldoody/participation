@@ -97,12 +97,12 @@ public class final_class extends HttpServlet{
      out.println("A simple example that demonstrates how to persist data to a file");
      out.println("</p>");
 
-     if(error != null && error.length() > 0){
+     /*if(error != null && error.length() > 0){
        out.println("<p style=\"color:red;\">Please correct the following and resubmit.</p>");
        out.println("<ol>");
        out.println(error);
        out.println("</ol>");
-     }
+     }*/
 
      out.print  ("<form name=\"persist2file\" method=\"post\"");
      out.println(" action=\""+Domain+Path+Servlet+"\">");

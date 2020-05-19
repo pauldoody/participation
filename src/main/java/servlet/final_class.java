@@ -103,6 +103,7 @@ public class final_class extends HttpServlet{
 	out.println("	alert(\"Field cannot be empty.\");");
 	out.println("	return false;");
 	out.println("}");
+	out.println("return (true);");
 	out.println("}");
 	out.println("</script>");
   }

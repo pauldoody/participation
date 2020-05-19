@@ -196,7 +196,7 @@ public class final_class extends HttpServlet{
    } else {
       for (int i=0; i<2; i++) {
          truthVals[index] = i;
-         printTruthTable(N, index + 1, truthVals);
+         printTruthTable(out , N, index + 1, truthVals);
       }
    }
 }

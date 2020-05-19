@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 
 @WebServlet(name = "final", urlPatterns = {"/final"})
-public class persistenceFile extends HttpServlet{
+public class final_class extends HttpServlet{
   static enum Data {BOOL};
   static String RESOURCE_FILE = "data.txt";
   static final String VALUE_SEPARATOR = ";";

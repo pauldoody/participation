@@ -102,7 +102,7 @@ public class final_class extends HttpServlet{
   private void PrintBody (PrintWriter out, String bool){
      out.println("<body onLoad=\"setFocus()\">");
      out.println("<p>");
-     out.println("Enter a Boolean Predicate for its Truth Table using AND or OR");
+     out.println("Enter a Boolean Predicate for its Truth Table using AND, OR, and, or");
      out.println("</p>");
 
      /*if(error != null && error.length() > 0){

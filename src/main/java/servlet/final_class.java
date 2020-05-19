@@ -144,7 +144,7 @@ public class final_class extends HttpServlet{
 
     //try {
         //out.println("  <tr>");
-        out.println("   <p>Boolean Predicates</p>");
+        //out.println("   <p>Boolean Predicates</p>");
         //out.println("  </tr>");
         /*File file = new File(resourcePath);
         if(!file.exists()){
@@ -169,7 +169,7 @@ public class final_class extends HttpServlet{
 		String[] ands = bool.split("AND|OR");
 		int count = ands.length;
 		//out.println(" Count: " + count);
-		out.println("<br><br>");
+		out.println("<p>" + bool + "</p>");
 		printTruthTable(out, count , 0 , new int[count]);
 		
 		
@@ -200,7 +200,7 @@ public class final_class extends HttpServlet{
 		  
          listing += truthVals[i] + " ";
 	  }
-		out.println(listing + "</p><br>");
+		out.println(listing + "</p>");
    } else {
       for (int i=0; i<2; i++) {
          truthVals[index] = i;

@@ -42,7 +42,8 @@ public class final_class extends HttpServlet{
        error= "<li>Input is required</li>";
      }
 	 
-	 if(!bool.contains("AND") && !bool.contains("OR"))
+	 if(!bool.contains("AND") && !bool.contains("OR") &&
+		!bool.contains("and") && !bool.contains("or"))
 	 {
 		 error = "<li>Must be a Predicate</li>";
 	 }
@@ -61,6 +62,8 @@ public class final_class extends HttpServlet{
        PrintTail(out);
      }else{
        PrintHead(out);
+	   
+	 out.println("<p>" + error + "</p>");
        PrintBody(out, bool);
        PrintTail(out);
      }
@@ -76,7 +79,6 @@ public class final_class extends HttpServlet{
      response.setContentType("text/html");
      PrintWriter out = response.getWriter();
      PrintHead(out);
-	 out.println("<p>" + error + "</p>");
      PrintBody(out, "");
      PrintTail(out);
   }
@@ -167,7 +169,7 @@ public class final_class extends HttpServlet{
         }
         bufferedReader.close();*/
 		
-		String[] ands = bool.split("AND|OR");
+		String[] ands = bool.split("AND|OR|and|or");
 		int count = ands.length;
 		//out.println(" Count: " + count);
 		out.println("<p>" + bool + "</p>");
@@ -200,7 +202,7 @@ public class final_class extends HttpServlet{
 	   String listing = "<p>";
       for (int i=0; i<N; i++)
 	  {
-		  operators[i] = truthVals[i];
+		  //operators[i] = truthVals[i];
          listing += truthVals[i] + " ";
 	  }
 		out.println(listing + "</p>");

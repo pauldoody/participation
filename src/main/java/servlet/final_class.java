@@ -71,7 +71,7 @@ public class final_class extends HttpServlet{
      response.setContentType("text/html");
      PrintWriter out = response.getWriter();
      PrintHead(out);
-     PrintBody(out, "", "", "", "");
+     PrintBody(out, "");
      PrintTail(out);
   }
 

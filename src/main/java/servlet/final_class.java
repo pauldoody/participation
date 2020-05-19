@@ -190,11 +190,11 @@ public class final_class extends HttpServlet{
   
   private void printTruthTable(PrintWriter out ,int N, int index, int[] truthVals) {
    if (index == N) {
-      for (i=0; i<N; i++)
+      for (int i=0; i<N; i++)
          out.print(truthVals[i] + " ");
 		out.print("\n");
    } else {
-      for (i=0; i<2; i++) {
+      for (int i=0; i<2; i++) {
          truthVals[index] = i;
          printTruthTable(N, index + 1, truthVals);
       }

@@ -76,6 +76,7 @@ public class final_class extends HttpServlet{
      response.setContentType("text/html");
      PrintWriter out = response.getWriter();
      PrintHead(out);
+	 out.println("<p>" + error + "</p>");
      PrintBody(out, "");
      PrintTail(out);
   }
@@ -99,7 +100,7 @@ public class final_class extends HttpServlet{
   private void PrintBody (PrintWriter out, String bool){
      out.println("<body onLoad=\"setFocus()\">");
      out.println("<p>");
-     out.println("Enter a Boolean Predicate for its Truth Table");
+     out.println("Enter a Boolean Predicate for its Truth Table using AND or OR");
      out.println("</p>");
 
      /*if(error != null && error.length() > 0){
@@ -114,7 +115,7 @@ public class final_class extends HttpServlet{
      out.println("");
      out.println(" <table>");
      out.println("  <tr>");
-     out.println("   <td>Name:</td>");
+     out.println("   <td>Predicate:</td>");
      out.println("   <td><input type=\"text\" name=\""+Data.BOOL.name()
       +"\" value=\""+bool+"\" size=30 required></td>");
      out.println("  </tr>");
@@ -194,10 +195,12 @@ public class final_class extends HttpServlet{
   private void printTruthTable(PrintWriter out ,int N, int index, int[] truthVals) {
 	  
    if (index == N) {
+	   
+	   Boolean [] operators = new Boolean[N];
 	   String listing = "<p>";
       for (int i=0; i<N; i++)
 	  {
-		  
+		  operators[i] = truthVals[i];
          listing += truthVals[i] + " ";
 	  }
 		out.println(listing + "</p>");

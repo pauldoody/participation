@@ -138,7 +138,7 @@ public class final_class extends HttpServlet{
      out.println(" <br>");
      out.println(" <br>");
      out.println(" <input type=\"submit\" value=\"" + "Go"
-      + "\" name=\"Operation\"  );
+      + "\" name=\"Operation"  );
      out.println(" <input type=\"reset\" value=\"Reset\" name=\"reset\">");
      out.println("</form>");
      out.println("");
